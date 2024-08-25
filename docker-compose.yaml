@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: marcosnasp/calculator-api:1.1
+    ports:
+      - "8000:8000"
+  
+  frontend:
+    image: marcosnasp/calculator-frontend:1.2
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
